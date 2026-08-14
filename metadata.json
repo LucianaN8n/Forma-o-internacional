@@ -1,0 +1,6 @@
+{
+  "name": "Instituto Saber Consciente - Formação Internacional em Terapeuta Holístico",
+  "description": "Página oficial da Formação Completa em Terapeuta Holístico do Instituto Saber Consciente com Certificação Internacional emitida nos Estados Unidos pela Saber Consciente Worldwide LLC, CEL Education e Florida Global University.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

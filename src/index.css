@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .font-heading {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
+  }
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #FFF0B5 0%, #E6CA65 25%, #C2962D 50%, #F5E28E 75%, #A8791B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-border-gradient {
+    border-image: linear-gradient(to bottom right, #f6e05e, #d69e2e, #b7791f) 1;
+  }
+  .gold-glow {
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+  }
+  .blue-glow {
+    box-shadow: 0 0 30px rgba(30, 90, 170, 0.35);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2.5s ease-in-out infinite;
+}
