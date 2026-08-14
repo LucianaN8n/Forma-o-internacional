@@ -207,7 +207,7 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
       "Domínio da Psicanálise Clínica e diagnóstico de Psicopatologias fundamentais",
       "Especializações em Psicanálise Infantil, Desenhos, Sistêmica, da Mulher e Envelhecimento",
       "Abordagens psicoterapêuticas modernas: TCC com Mindfulness, Terapia de Aceitação/Compromisso, Mentalização e Logoterapia",
-      "Prática clínica real com supervisão de atendimento, estudos de caso, TVP e postura analítica segura"
+      "Prática clínica com Supervisão de Atendimento e Estudos de Caso (1 aula online ao vivo por mês), TVP e postura analítica"
     ],
     techniqueCategories: [
       {
@@ -240,7 +240,7 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
         categoryName: "Prática Clínica, Supervisão & Extensões",
         description: "Ferramentas práticas de atendimento, nichos e desenvolvimento profissional:",
         techniques: [
-          "Supervisão de Atendimento e Estudos de Caso",
+          "Supervisão de Atendimento e Estudos de Caso (1 aula online ao vivo por mês)",
           "Primeiros Passos para Começar na Área",
           "Técnicas de Atendimento",
           "Mapas Mentais",
@@ -266,8 +266,8 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
         description: "Interpretação psicanalítica do desenho infantil, fases do desenvolvimento, psicanálise sistêmica e clínica feminina."
       },
       {
-        title: "4. Supervisão de Atendimento & Estudos de Caso",
-        description: "Análise de casos clínicos reais, manejo de transferência/contratransferência, resistências e enquadre seguro."
+        title: "4. Supervisão de Atendimento & Estudos de Caso (1 aula online ao vivo por mês)",
+        description: "Encontros mensais online ao vivo com análise de casos clínicos reais, manejo de transferência/contratransferência, resistências e enquadre seguro."
       },
       {
         title: "5. Psicoterapia Contextual, Breve & Mentalização",

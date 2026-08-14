@@ -11,6 +11,7 @@ import { GuaranteeSection } from './components/GuaranteeSection';
 import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { StickyCta } from './components/StickyCta';
+import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
   return (
@@ -50,6 +51,9 @@ export default function App() {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating WhatsApp Contact Button */}
+      <WhatsAppButton />
 
       {/* Floating Sticky Conversion Bar */}
       <StickyCta />

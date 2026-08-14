@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { INSTITUTION_INFO } from '../data/coursesData';
-import { Award, Sparkles, Menu, X, ArrowRight, Globe2, GraduationCap } from 'lucide-react';
+import { Award, Sparkles, Menu, X, ArrowRight, Globe2, GraduationCap, MessageCircle } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const whatsappUrl = "https://wa.me/5511992338606?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20forma%C3%A7%C3%B5es%20com%20certifica%C3%A7%C3%A3o%20internacional.";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,8 +74,22 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Action CTA Button */}
+          {/* Action CTA Button & WhatsApp */}
           <div className="hidden sm:flex items-center gap-3">
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Falar no WhatsApp"
+              title="Falar no WhatsApp (11) 99233-8606"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/50 text-[#25D366] hover:text-emerald-300 font-semibold text-xs transition-all shadow-sm"
+              id="navbar-whatsapp-btn"
+            >
+              <MessageCircle className="w-4 h-4 fill-[#25D366] stroke-none" />
+              <span className="hidden xl:inline">(11) 99233-8606</span>
+              <span className="xl:hidden">WhatsApp</span>
+            </a>
+
             <a
               href="#cursos-elegiveis"
               className="relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
@@ -136,7 +151,19 @@ export const Navbar: React.FC = () => {
             >
               Perguntas Frequentes
             </a>
-            <div className="pt-2 border-t border-slate-800">
+
+            <div className="pt-2 border-t border-slate-800 flex flex-col gap-2.5">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#25D366] text-slate-950 font-bold text-sm shadow-md"
+              >
+                <MessageCircle className="w-4 h-4 fill-slate-950 stroke-none" />
+                <span>WhatsApp: (11) 99233-8606</span>
+              </a>
+
               <a
                 href="#cursos-elegiveis"
                 onClick={() => setMobileMenuOpen(false)}
