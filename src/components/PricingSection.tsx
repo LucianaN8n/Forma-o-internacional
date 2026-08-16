@@ -12,7 +12,9 @@ import {
   Award,
   Zap,
   GraduationCap,
-  ExternalLink
+  ExternalLink,
+  Gift,
+  BadgeCheck
 } from 'lucide-react';
 
 export const PricingSection: React.FC = () => {
@@ -128,6 +130,19 @@ export const PricingSection: React.FC = () => {
                             ✔ Avalizado por @fgu_online e @cel.education
                           </strong>
                           <span className="text-[11px] text-slate-300">Florida Global University ({course.hours})</span>
+                        </div>
+                      </div>
+
+                      {/* Bonus ATH Digital Card */}
+                      <div className="flex items-start gap-2 p-2.5 rounded-lg bg-gradient-to-r from-amber-500/15 via-amber-400/10 to-amber-500/5 border border-amber-400/40 shadow-sm">
+                        <Gift className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <strong className="text-amber-300 font-bold block flex items-center gap-1">
+                            🎁 BÔNUS: Carteira Digital ATH Associação
+                          </strong>
+                          <span className="text-[11px] text-slate-200">
+                            Emitida pela ATH Associação, <span className="text-emerald-400 font-semibold">100% gratuita por 1 ano</span>
+                          </span>
                         </div>
                       </div>
 

@@ -16,7 +16,8 @@ import {
   FileText, 
   CheckCircle2, 
   ChevronRight,
-  ExternalLink
+  ExternalLink,
+  Gift
 } from 'lucide-react';
 
 export const EligibleCoursesSection: React.FC = () => {
@@ -146,7 +147,7 @@ export const EligibleCoursesSection: React.FC = () => {
                     </div>
 
                     {/* Learning Outcomes Checklist */}
-                    <div className="space-y-2 mb-6">
+                    <div className="space-y-2 mb-4">
                       <h4 className="text-xs font-bold text-slate-200 uppercase tracking-wider flex items-center gap-1.5">
                         <CheckCircle2 className="w-3.5 h-3.5 text-amber-400" />
                         O que você vai dominar:
@@ -159,6 +160,19 @@ export const EligibleCoursesSection: React.FC = () => {
                             <span className="line-clamp-2">{outcome}</span>
                           </div>
                         ))}
+                      </div>
+                    </div>
+
+                    {/* Carteira Digital ATH Bonus Tag */}
+                    <div className="mb-4 p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-start gap-2 text-xs">
+                      <Gift className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <strong className="text-amber-300 font-semibold block">
+                          BÔNUS: Carteira Digital ATH
+                        </strong>
+                        <span className="text-[11px] text-slate-300">
+                          Emitida pela ATH Associação, gratuita por 1 ano.
+                        </span>
                       </div>
                     </div>
 
@@ -328,6 +342,26 @@ export const EligibleCoursesSection: React.FC = () => {
                     </div>
                   );
                 })}
+              </div>
+            </div>
+          )}
+
+          {/* Included Bonuses Strip */}
+          {selectedCourse.includedBonuses && selectedCourse.includedBonuses.length > 0 && (
+            <div className="my-6 p-5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-[#0b223a] to-emerald-500/10 border border-amber-500/30">
+              <div className="flex items-center gap-2 mb-3">
+                <Gift className="w-5 h-5 text-amber-400" />
+                <h5 className="font-cinzel text-sm sm:text-base font-bold text-slate-100 uppercase tracking-wider">
+                  Bônus Inclusos na Formação ({selectedCourse.title})
+                </h5>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                {selectedCourse.includedBonuses.map((bonus, bIdx) => (
+                  <div key={bIdx} className="flex items-center gap-2 text-xs text-slate-200 bg-slate-900/60 px-3 py-2 rounded-lg border border-slate-700/60">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                    <span>{bonus}</span>
+                  </div>
+                ))}
               </div>
             </div>
           )}

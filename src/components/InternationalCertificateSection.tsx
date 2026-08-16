@@ -4,7 +4,8 @@ import {
   ShieldCheck, 
   CheckCircle2, 
   GraduationCap, 
-  ArrowRight 
+  ArrowRight,
+  Gift
 } from 'lucide-react';
 
 export const InternationalCertificateSection: React.FC = () => {
@@ -129,6 +130,18 @@ export const InternationalCertificateSection: React.FC = () => {
                     </strong>
                     <p className="text-slate-300 text-xs mt-0.5">
                       Estude no seu próprio ritmo pela plataforma digital. A emissão do Certificado Internacional já está inclusa na sua matrícula com desconto.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-3.5 rounded-xl bg-gradient-to-r from-amber-500/15 via-amber-400/10 to-emerald-500/10 border border-amber-400/40 flex items-start gap-3 shadow-md">
+                  <Gift className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-amber-300 text-sm block">
+                      🎁 BÔNUS: Carteira Digital ATH Associação (1 ano grátis)
+                    </strong>
+                    <p className="text-slate-200 text-xs mt-0.5">
+                      Credencial profissional digital emitida pela ATH Associação de Terapeutas Holísticos, inclusa gratuitamente por 1 ano para todos os alunos matriculados.
                     </p>
                   </div>
                 </div>

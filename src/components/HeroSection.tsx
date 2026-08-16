@@ -11,7 +11,8 @@ import {
   Globe2, 
   GraduationCap,
   Check,
-  ExternalLink
+  ExternalLink,
+  Gift
 } from 'lucide-react';
 
 export const HeroSection: React.FC = () => {
@@ -66,6 +67,10 @@ export const HeroSection: React.FC = () => {
             <span className="flex items-center gap-1.5 bg-[#0b2138] border border-blue-400/30 px-3 py-1.5 rounded-lg text-blue-200 font-medium">
               <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
               ✔ Certificado por @cel.education e avalizado por @fgu_online
+            </span>
+            <span className="flex items-center gap-1.5 bg-gradient-to-r from-amber-500/20 to-emerald-500/20 border border-amber-400/50 px-3 py-1.5 rounded-lg text-amber-300 font-bold shadow-sm">
+              <Gift className="w-4 h-4 text-amber-400 flex-shrink-0" />
+              🎁 BÔNUS: Carteira Digital ATH (1 ano grátis)
             </span>
           </div>
 

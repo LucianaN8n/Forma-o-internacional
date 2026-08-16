@@ -108,7 +108,7 @@ export const InstructorSection: React.FC = () => {
             </h2>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Com formação acadêmica sólida, <strong>Pós-Graduação em Psicanálise e neurociencia</strong> e <strong>Mestrado em Psicanálise Clínica</strong>, a <strong>Diretora Luciana Domingos</strong> (CRTP 2966) consolidou o <strong>Instituto Saber Consciente ®</strong> como uma das maiores referências em formação integrativa e psicanálise do país.
+              Com formação acadêmica sólida, <strong>Pós-Graduação em Psicanálise</strong>, <strong>Pós-Graduação em Neurociência</strong> e <strong>Mestrado em Psicologia Clínica pela Christian Business School na Flórida</strong>, a <strong>Diretora Luciana Domingos</strong> (CRTP 2966) consolidou o <strong>Instituto Saber Consciente ®</strong> como uma das maiores referências em formação integrativa e psicanálise do país.
             </p>
 
             <p className="text-slate-300 text-sm sm:text-base leading-relaxed">

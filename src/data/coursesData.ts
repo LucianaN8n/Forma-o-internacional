@@ -77,6 +77,7 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
     ],
     includedBonuses: [
       "Certificado Internacional de 150h emitido nos EUA (Saber Consciente LLC)",
+      "Bônus Especial: Carteira Digital emitida pela ATH Associação (Gratuita por 1 ano)",
       "Formação 100% Online com Acesso Vitalício"
     ]
   },
@@ -180,11 +181,12 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
       }
     ],
     includedBonuses: [
+      "Certificado Internacional de 568h emitido nos EUA (Saber Consciente LLC)",
+      "Bônus Especial: Carteira Digital emitida pela ATH Associação (Gratuita por 1 ano)",
       "Bônus: Técnicas de Atendimento",
       "Bônus: Primeiros passos para começar na área",
       "Bônus: Como divulgar o seu trabalho",
-      "Bônus: Reiki e Cromo em Animais",
-      "Certificado Internacional de 568h emitido nos EUA (Saber Consciente LLC)"
+      "Bônus: Reiki e Cromo em Animais"
     ]
   },
   {
@@ -292,6 +294,8 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
     ],
     includedBonuses: [
       "Certificado Internacional de 600h emitido nos EUA (Saber Consciente LLC)",
+      "Bônus Especial: Carteira Digital emitida pela ATH Associação (Gratuita por 1 ano)",
+      "Supervisão de Casos e Atendimento (1 aula online ao vivo por mês)",
       "Formação 100% Online com Acesso Vitalício"
     ]
   }
@@ -358,6 +362,11 @@ export const FAQ_ITEMS: FaqItem[] = [
     question: "Como funciona a Certificação Internacional nos cursos elegíveis?",
     answer: "Os cursos elegíveis possuem emissão direta pela Saber Consciente Worldwide LLC (Estados Unidos), são certificados por @cel.education e avalizados por @fgu_online (Florida Global University), conferindo o título executivo internacional com carga horária registrada (Terapeuta Holístico Master com 568h, Psicoterapia e Psicanálise com 600h e Neurociência Comportamental com 150h).",
     category: "Certificação"
+  },
+  {
+    question: "Como funciona o bônus da Carteira Digital emitida pela ATH Associação?",
+    answer: "Ao se matricular, você ganha como BÔNUS EXCLUSIVO a emissão da sua Carteira Digital profissional emitida pela ATH Associação (Associação dos Terapeutas Holísticos), totalmente GRATUITA por 1 ano, proporcionando credenciamento e reconhecimento profissional imediato para atuar.",
+    category: "Bônus"
   },
   {
     question: "Quais são os cursos elegíveis para a Certificação Internacional?",
