@@ -94,8 +94,8 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
     studentsCount: "+11.500 alunos",
     featured: true,
     highlightColor: "emerald",
-    shortDescription: "Ministrado pela Profª. Ana Esteves e corpo docente do Instituto Saber Consciente ®. Formação completa com 35 técnicas consagradas em Terapias Mentais, Corporais e Energéticas, com carga de 568h e diploma emitido nos EUA.",
-    fullDescription: "Ministrado pela Profª. Ana Esteves e renomados especialistas do Instituto Saber Consciente ®, este é o programa de formação de terapeutas holísticos mais conceituado e completo do mercado. Você dominará 35 técnicas fundamentais divididas em 3 grandes eixos de atuação clínica: Terapias Mentais e Emocionais, Terapias Corporais e Terapias Energéticas, capacitando você para atendimentos presenciais e online de alto impacto.",
+    shortDescription: "Ministrado pela Profª. Ana Esteves, Prof. Tibério, Profª. Mariana Sallum e corpo docente do Instituto Saber Consciente ®. Formação completa com 35 técnicas consagradas em Terapias Mentais, Corporais e Energéticas, com carga de 568h e diploma emitido nos EUA.",
+    fullDescription: "Ministrado pela Profª. Ana Esteves, Prof. Tibério (Cristaloterapia e Terapia Quântica), Profª. Mariana Sallum (Aromaterapia, Cromoterapia e Práticas Corporais) e renomados especialistas do Instituto Saber Consciente ®, este é o programa de formação de terapeutas holísticos mais conceituado e completo do mercado. Você dominará 35 técnicas fundamentais divididas em 3 grandes eixos de atuação clínica: Terapias Mentais e Emocionais, Terapias Corporais e Terapias Energéticas, capacitando você para atendimentos presenciais e online de alto impacto.",
     certificateTitle: "Executive Certified Diploma - Senior International Holistic Therapist (568h)",
     targetAudience: "Iniciantes do zero absoluto que desejam viver de terapia, bem como terapeutas já atuantes que desejam se consagrar com diploma internacional emitido nos EUA e um arsenal completo de 35 ferramentas de cura.",
     learningOutcomes: [
