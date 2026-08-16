@@ -90,7 +90,7 @@ export const TestimonialsSection: React.FC = () => {
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap items-center justify-center gap-4 bg-[#091b2e] border border-amber-500/30 rounded-2xl px-6 py-4 shadow-lg">
             <span className="text-sm text-slate-300">
-              Junte-se a mais de <strong>18.000 alunos</strong> em todo o mundo.
+              Junte-se a mais de <strong>50.000 alunos</strong> em todo o mundo.
             </span>
             <a
               href="#cursos-elegiveis"

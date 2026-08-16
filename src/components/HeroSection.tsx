@@ -150,7 +150,7 @@ export const HeroSection: React.FC = () => {
                   </button>
 
                   <h3 className="mt-6 font-cinzel text-lg sm:text-2xl font-bold text-slate-100 max-w-lg">
-                    Conheça o Instituto que já formou mais de 18.000 Profissionais no Mundo
+                    Conheça o Instituto que já formou mais de 50.000 Profissionais no Mundo
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-md">
                     Descubra como você pode conquistar sua independência profissional com a chancela do Instituto Saber Consciente.
@@ -196,7 +196,7 @@ export const HeroSection: React.FC = () => {
           </div>
 
           <div className="bg-[#0c2138]/80 border border-slate-700/60 rounded-xl p-4 sm:p-5 text-center shadow-lg hover:border-amber-500/40 transition-colors">
-            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-cinzel">+18.000</div>
+            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-cinzel">+50.000</div>
             <div className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Alunos em 14 Países</div>
           </div>
 

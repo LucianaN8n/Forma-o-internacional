@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
               Certificado Internacional
             </a>
             <a href="#luciana" className="hover:text-amber-400 transition-colors" id="nav-link-diretora">
-              Diretora Luciana Domingos
+              Diretoria & Docentes
             </a>
             <a href="#depoimentos" className="hover:text-amber-400 transition-colors" id="nav-link-depoimentos">
               Depoimentos
@@ -135,7 +135,7 @@ export const Navbar: React.FC = () => {
               onClick={() => setMobileMenuOpen(false)}
               className="text-slate-200 hover:text-amber-400 font-medium py-1"
             >
-              Sobre a Diretora
+              Diretoria & Docentes
             </a>
             <a 
               href="#depoimentos" 

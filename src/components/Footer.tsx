@@ -71,7 +71,7 @@ export const Footer: React.FC = () => {
                 <a href="#certificado" className="hover:text-amber-400 transition-colors">Certificado Internacional</a>
               </li>
               <li>
-                <a href="#luciana" className="hover:text-amber-400 transition-colors">Diretora Luciana Domingos</a>
+                <a href="#luciana" className="hover:text-amber-400 transition-colors">Diretoria & Docentes</a>
               </li>
               <li>
                 <a href="#faq" className="hover:text-amber-400 transition-colors">Dúvidas Frequentes</a>
