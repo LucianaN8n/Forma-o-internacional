@@ -68,21 +68,21 @@ export const WhoIsThisFor: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-[#071524] relative">
+    <section className="py-20 lg:py-28 bg-[#f8f9fa] text-[#191c1d] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            <UserCheck className="w-3.5 h-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#001f57]/10 border border-[#001f57]/20 text-[#001f57] text-xs font-bold uppercase tracking-wider mb-3">
+            <UserCheck className="w-3.5 h-3.5 text-[#001f57]" />
             Público-Alvo
           </div>
           
-          <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-slate-100">
+          <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#001f57]">
             Para Quem São Nossas <span className="gold-gradient-text">Formações Internacionais?</span>
           </h2>
           
-          <p className="mt-4 text-slate-300 text-base sm:text-lg">
+          <p className="mt-4 text-[#444650] text-base sm:text-lg">
             Independentemente do seu ponto de partida, os programas do Instituto Saber Consciente foram estruturados para capacitar você com excelência.
           </p>
         </div>
@@ -94,45 +94,45 @@ export const WhoIsThisFor: React.FC = () => {
             return (
               <div 
                 key={idx}
-                className="bg-[#0b1f35] border border-slate-700/60 hover:border-amber-500/50 rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-xl group"
+                className="bg-white border border-[#e1e3e4] hover:border-[#c5a059] rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-md hover:shadow-xl group"
               >
                 <div>
                   {/* Badge */}
-                  <span className="inline-block text-[11px] font-semibold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full mb-4">
+                  <span className="inline-block text-[11px] font-bold uppercase tracking-wider text-[#001f57] bg-[#001f57]/10 border border-[#001f57]/20 px-2.5 py-0.5 rounded-full mb-4">
                     {profile.highlight}
                   </span>
 
                   {/* Icon */}
-                  <div className="w-12 h-12 rounded-xl bg-[#132c4a] group-hover:bg-amber-500/20 border border-amber-500/20 flex items-center justify-center mb-4 transition-colors">
-                    <Icon className="w-6 h-6 text-amber-400" />
+                  <div className="w-12 h-12 rounded-xl bg-[#f0f4f8] group-hover:bg-[#c5a059]/20 border border-[#d2ddec] group-hover:border-[#c5a059]/40 flex items-center justify-center mb-4 transition-colors">
+                    <Icon className="w-6 h-6 text-[#001f57]" />
                   </div>
 
-                  <h3 className="font-cinzel text-lg font-bold text-slate-100 group-hover:text-amber-200 transition-colors">
+                  <h3 className="font-cinzel text-lg font-bold text-[#001f57] group-hover:text-[#001f57] transition-colors">
                     {profile.title}
                   </h3>
-                  <p className="text-xs text-amber-300/80 font-medium mb-3">
+                  <p className="text-xs text-[#8c6d2d] font-semibold mb-3">
                     {profile.subtitle}
                   </p>
 
-                  <p className="text-xs text-slate-300 leading-relaxed mb-4">
+                  <p className="text-xs text-[#444650] leading-relaxed mb-4">
                     {profile.description}
                   </p>
 
                   {/* Feature Checkmarks */}
-                  <div className="space-y-2 pt-3 border-t border-slate-700/50">
+                  <div className="space-y-2 pt-3 border-t border-[#e1e3e4]">
                     {profile.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-start gap-2 text-[11px] text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                      <div key={fIdx} className="flex items-start gap-2 text-[11px] text-[#444650]">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#00875a] flex-shrink-0 mt-0.5" />
                         <span>{feat}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-slate-700/50">
+                <div className="mt-6 pt-4 border-t border-[#e1e3e4]">
                   <a
                     href="#cursos-elegiveis"
-                    className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-slate-800 hover:bg-amber-500 hover:text-slate-950 text-slate-200 text-xs font-bold transition-all text-center"
+                    className="w-full flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-[#001f57] hover:bg-[#c5a059] hover:text-[#001438] text-white text-xs font-bold transition-all text-center"
                   >
                     <span>Ver Cursos Elegíveis</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -19,26 +19,26 @@ import {
 
 export const PricingSection: React.FC = () => {
   return (
-    <section id="preco" className="py-20 lg:py-28 bg-gradient-to-b from-[#06111d] via-[#091f35] to-[#06101c] relative overflow-hidden">
+    <section id="preco" className="py-20 lg:py-28 bg-gradient-to-b from-[#001f57] via-[#0d2b68] to-[#001847] text-white relative overflow-hidden">
       
       {/* Glow Effects */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#c5a059]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-3">
-            <GraduationCap className="w-3.5 h-3.5 text-amber-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#173574] border border-[#c5a059]/40 text-[#ecdcb9] text-xs font-semibold uppercase tracking-wider mb-3">
+            <GraduationCap className="w-3.5 h-3.5 text-[#c5a059]" />
             🎓 Cursos com Certificação Internacional
           </div>
           
-          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-100">
+          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
             Escolha o Seu Curso & <br />
             <span className="gold-gradient-text">Garanta Sua Vaga Internacional</span>
           </h2>
           
-          <p className="mt-4 text-slate-300 text-base sm:text-lg">
+          <p className="mt-4 text-[#dae2ff] text-base sm:text-lg">
             Matricule-se com condição especial, acesso vitalício e certificação executiva internacional emitida nos EUA.
           </p>
         </div>
@@ -49,25 +49,12 @@ export const PricingSection: React.FC = () => {
             const isFeatured = course.featured;
 
             const theme = {
-              violet: {
-                border: 'from-purple-500 via-indigo-500 to-purple-600',
-                badge: 'bg-purple-500/20 text-purple-200 border-purple-400/40',
-                btn: 'bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-purple-600/30',
-                accent: 'text-purple-400'
-              },
-              emerald: {
-                border: 'from-amber-400 via-emerald-400 to-amber-500',
-                badge: 'bg-emerald-500/20 text-emerald-200 border-emerald-400/40',
-                btn: 'bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-slate-950 shadow-amber-500/30',
-                accent: 'text-emerald-400'
-              },
-              amber: {
-                border: 'from-amber-500 via-amber-400 to-amber-600',
-                badge: 'bg-amber-500/20 text-amber-200 border-amber-400/40',
-                btn: 'bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-slate-950 shadow-amber-600/30',
-                accent: 'text-amber-400'
-              }
-            }[course.highlightColor];
+              border: isFeatured 
+                ? 'from-[#c5a059] via-[#ecdcb9] to-[#c5a059]' 
+                : 'from-[#425c9d] via-[#173574] to-[#425c9d]',
+              badge: 'bg-[#c5a059]/20 text-[#ecdcb9] border-[#c5a059]/40',
+              btn: 'bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438] shadow-[#c5a059]/20'
+            };
 
             return (
               <div
@@ -78,81 +65,81 @@ export const PricingSection: React.FC = () => {
               >
                 {/* Ribbon */}
                 {isFeatured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-emerald-500 text-slate-950 text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-lg flex items-center gap-1.5 z-20">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#c5a059] to-[#b38c3c] text-[#001438] text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-lg flex items-center gap-1.5 z-20">
                     <Sparkles className="w-3.5 h-3.5" />
                     MAIS PROCURADO
                   </div>
                 )}
 
-                <div className="bg-[#091b2e] rounded-[22px] p-6 sm:p-7 text-slate-100 flex flex-col justify-between h-full">
+                <div className="bg-[#173574]/90 rounded-[22px] p-6 sm:p-7 text-white flex flex-col justify-between h-full border border-[#425c9d]/40">
                   
                   <div>
                     {/* Title & Emoji */}
-                    <div className="text-center pb-5 border-b border-slate-700/60">
+                    <div className="text-center pb-5 border-b border-[#425c9d]/40">
                       <div className="text-4xl mb-2">{course.emoji}</div>
-                      <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-slate-100">
+                      <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-white">
                         {course.title}
                       </h3>
-                      <p className="text-xs font-semibold text-amber-400 mt-1">
+                      <p className="text-xs font-semibold text-[#ecdcb9] mt-1">
                         {course.subtitle}
                       </p>
-                      <p className="text-[11px] text-slate-400 mt-1">
+                      <p className="text-[11px] text-[#dae2ff] mt-1">
                         {course.hours} • 100% Online • Acesso Vitalício
                       </p>
                     </div>
 
                     {/* Features list */}
-                    <div className="space-y-2.5 my-6 text-xs text-slate-200">
-                      <div className="flex items-start gap-2 p-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                        <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <div className="space-y-2.5 my-6 text-xs text-[#dae2ff]">
+                      <div className="flex items-start gap-2 p-2 rounded-lg bg-[#001f57]/80 border border-[#425c9d]/40">
+                        <Check className="w-4 h-4 text-[#25d366] flex-shrink-0 mt-0.5" />
                         <div>
-                          <strong className="text-emerald-200 font-semibold block">
+                          <strong className="text-white font-semibold block">
                             ✔ Formação 100% Online
                           </strong>
-                          <span className="text-[11px] text-slate-300">Estude no seu ritmo pelo computador, tablet ou celular</span>
+                          <span className="text-[11px] text-[#dae2ff]">Estude no seu ritmo pelo computador, tablet ou celular</span>
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-2 p-2 rounded-lg bg-amber-500/10 border border-amber-500/20">
-                        <Award className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-2 p-2 rounded-lg bg-[#001f57]/80 border border-[#c5a059]/30">
+                        <Award className="w-4 h-4 text-[#c5a059] flex-shrink-0 mt-0.5" />
                         <div>
-                          <strong className="text-amber-200 font-semibold block">
+                          <strong className="text-[#ecdcb9] font-semibold block">
                             ✔ Emissão Saber Consciente Worldwide LLC (EUA)
                           </strong>
-                          <span className="text-[11px] text-slate-300">Executive Diploma com chancela internacional</span>
+                          <span className="text-[11px] text-[#dae2ff]">Executive Diploma com chancela internacional</span>
                         </div>
                       </div>
 
-                      <div className="flex items-start gap-2 p-2 rounded-lg bg-blue-500/10 border border-blue-400/20">
-                        <Globe2 className="w-4 h-4 text-blue-400 flex-shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-2 p-2 rounded-lg bg-[#001f57]/80 border border-[#425c9d]/40">
+                        <Globe2 className="w-4 h-4 text-[#b2c5ff] flex-shrink-0 mt-0.5" />
                         <div>
-                          <strong className="text-blue-200 font-semibold block">
+                          <strong className="text-white font-semibold block">
                             ✔ Avalizado por @fgu_online e @cel.education
                           </strong>
-                          <span className="text-[11px] text-slate-300">Florida Global University ({course.hours})</span>
+                          <span className="text-[11px] text-[#dae2ff]">Florida Global University ({course.hours})</span>
                         </div>
                       </div>
 
                       {/* Bonus ATH Digital Card */}
-                      <div className="flex items-start gap-2 p-2.5 rounded-lg bg-gradient-to-r from-amber-500/15 via-amber-400/10 to-amber-500/5 border border-amber-400/40 shadow-sm">
-                        <Gift className="w-4 h-4 text-amber-400 flex-shrink-0 mt-0.5" />
+                      <div className="flex items-start gap-2 p-2.5 rounded-lg bg-[#c5a059]/15 border border-[#c5a059]/40 shadow-sm">
+                        <Gift className="w-4 h-4 text-[#c5a059] flex-shrink-0 mt-0.5" />
                         <div>
-                          <strong className="text-amber-300 font-bold block flex items-center gap-1">
+                          <strong className="text-[#ecdcb9] font-bold block flex items-center gap-1">
                             🎁 BÔNUS: Carteira Digital ATH Associação
                           </strong>
-                          <span className="text-[11px] text-slate-200">
-                            Emitida pela ATH Associação, <span className="text-emerald-400 font-semibold">100% gratuita por 1 ano</span>
+                          <span className="text-[11px] text-[#dae2ff]">
+                            Emitida pela ATH Associação, <span className="text-[#25d366] font-semibold">100% gratuita por 1 ano</span>
                           </span>
                         </div>
                       </div>
 
                       <div className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#25d366] flex-shrink-0 mt-0.5" />
                         <span><strong>Certificação Internacional</strong> inclusa na formação</span>
                       </div>
 
                       <div className="flex items-start gap-2">
-                        <Check className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-[#25d366] flex-shrink-0 mt-0.5" />
                         <span><strong>Acesso Vitalício</strong> à plataforma e suporte a dúvidas</span>
                       </div>
                     </div>
@@ -171,8 +158,8 @@ export const PricingSection: React.FC = () => {
                       <ExternalLink className="w-4 h-4" />
                     </a>
 
-                    <p className="text-[11px] text-slate-400 text-center mt-2.5 flex items-center justify-center gap-1">
-                      <Lock className="w-3 h-3 text-emerald-400" />
+                    <p className="text-[11px] text-[#dae2ff] text-center mt-2.5 flex items-center justify-center gap-1">
+                      <Lock className="w-3 h-3 text-[#25d366]" />
                       Checkout Seguro Hotmart
                     </p>
                   </div>
@@ -185,17 +172,17 @@ export const PricingSection: React.FC = () => {
 
         {/* Global Security & Payment Trust Footer */}
         <div className="mt-12 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-5 text-xs text-slate-400 bg-[#091b2e] px-6 py-3 rounded-2xl border border-slate-800">
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <Lock className="w-4 h-4 text-emerald-400" />
+          <div className="inline-flex flex-wrap items-center justify-center gap-5 text-xs text-[#dae2ff] bg-[#173574]/80 px-6 py-3 rounded-2xl border border-[#425c9d]/40">
+            <span className="flex items-center gap-1.5 text-white">
+              <Lock className="w-4 h-4 text-[#25d366]" />
               Pagamento 100% Seguro Hotmart
             </span>
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
+            <span className="flex items-center gap-1.5 text-white">
+              <ShieldCheck className="w-4 h-4 text-[#25d366]" />
               7 Dias de Garantia Incondicional
             </span>
-            <span className="flex items-center gap-1.5 text-slate-300">
-              <CreditCard className="w-4 h-4 text-amber-400" />
+            <span className="flex items-center gap-1.5 text-white">
+              <CreditCard className="w-4 h-4 text-[#c5a059]" />
               Cartão em até 12x, PIX ou Boleto
             </span>
           </div>

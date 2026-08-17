@@ -18,12 +18,12 @@ export const Navbar: React.FC = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       {/* Top Banner Announcement */}
-      <div className="bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 text-slate-950 font-semibold text-xs md:text-sm py-2 px-4 text-center shadow-inner flex items-center justify-center gap-2">
-        <Globe2 className="w-4 h-4 text-slate-950 animate-spin" style={{ animationDuration: '10s' }} />
+      <div className="bg-[#173574] text-[#ecdcb9] font-medium text-xs md:text-sm py-2 px-4 text-center border-b border-[#c5a059]/30 shadow-inner flex items-center justify-center gap-2">
+        <Globe2 className="w-4 h-4 text-[#c5a059] animate-spin" style={{ animationDuration: '10s' }} />
         <span>
           <strong>CURSOS 100% ONLINE (EUA):</strong> Emissão pela Saber Consciente Worldwide LLC • Avalizado por @fgu_online & @cel.education
         </span>
-        <span className="hidden sm:inline-block bg-slate-950 text-amber-300 text-[11px] px-2 py-0.5 rounded font-bold uppercase tracking-wider ml-1">
+        <span className="hidden sm:inline-block bg-[#001f57] text-[#ecdcb9] text-[11px] px-2.5 py-0.5 rounded border border-[#c5a059]/40 font-bold uppercase tracking-wider ml-1">
           Inscrições Abertas
         </span>
       </div>
@@ -31,45 +31,45 @@ export const Navbar: React.FC = () => {
       {/* Main Navigation Bar */}
       <nav className={`transition-all duration-300 ${
         scrolled 
-          ? 'bg-[#0a1b2e]/95 backdrop-blur-md border-b border-amber-500/20 py-3 shadow-xl' 
-          : 'bg-[#071320]/80 backdrop-blur-sm py-4 border-b border-white/5'
+          ? 'bg-[#001f57]/95 backdrop-blur-md border-b border-[#173574] py-3 shadow-xl' 
+          : 'bg-[#001f57]/85 backdrop-blur-sm py-4 border-b border-white/10'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
           {/* Brand Logo */}
           <a href="#" className="flex items-center gap-3 group" id="navbar-brand-logo">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-600 to-amber-300 flex items-center justify-center p-0.5 shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-[#0b1e32] rounded-full flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-amber-400" />
+            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#c5a059] via-[#ecdcb9] to-[#c5a059] flex items-center justify-center p-0.5 shadow-md shadow-black/20 group-hover:scale-105 transition-transform">
+              <div className="w-full h-full bg-[#001f57] rounded-full flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-[#c5a059]" />
               </div>
             </div>
             <div className="flex flex-col">
-              <span className="font-cinzel text-base sm:text-lg font-bold tracking-wider text-slate-100 uppercase">
+              <span className="font-cinzel text-base sm:text-lg font-bold tracking-wider text-white uppercase">
                 Instituto <span className="gold-gradient-text">Saber Consciente</span>
               </span>
-              <span className="text-[10px] text-amber-300/80 font-medium tracking-widest uppercase">
+              <span className="text-[10px] text-[#dae2ff] font-medium tracking-widest uppercase">
                 Worldwide LLC • Certificação Internacional
               </span>
             </div>
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-200">
-            <a href="#cursos-elegiveis" className="hover:text-amber-400 transition-colors flex items-center gap-1.5" id="nav-link-cursos">
-              <GraduationCap className="w-4 h-4 text-amber-400" />
+          <div className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-100">
+            <a href="#cursos-elegiveis" className="hover:text-[#c5a059] transition-colors flex items-center gap-1.5" id="nav-link-cursos">
+              <GraduationCap className="w-4 h-4 text-[#c5a059]" />
               Cursos Elegíveis
             </a>
-            <a href="#certificado" className="hover:text-amber-400 transition-colors flex items-center gap-1.5" id="nav-link-certificado">
-              <Award className="w-4 h-4 text-amber-400" />
+            <a href="#certificado" className="hover:text-[#c5a059] transition-colors flex items-center gap-1.5" id="nav-link-certificado">
+              <Award className="w-4 h-4 text-[#c5a059]" />
               Certificado Internacional
             </a>
-            <a href="#luciana" className="hover:text-amber-400 transition-colors" id="nav-link-diretora">
+            <a href="#luciana" className="hover:text-[#c5a059] transition-colors" id="nav-link-diretora">
               Diretoria & Docentes
             </a>
-            <a href="#depoimentos" className="hover:text-amber-400 transition-colors" id="nav-link-depoimentos">
+            <a href="#depoimentos" className="hover:text-[#c5a059] transition-colors" id="nav-link-depoimentos">
               Depoimentos
             </a>
-            <a href="#faq" className="hover:text-amber-400 transition-colors" id="nav-link-faq">
+            <a href="#faq" className="hover:text-[#c5a059] transition-colors" id="nav-link-faq">
               Dúvidas
             </a>
           </div>
@@ -82,17 +82,17 @@ export const Navbar: React.FC = () => {
               rel="noopener noreferrer"
               aria-label="Falar no WhatsApp"
               title="Falar no WhatsApp (11) 99233-8606"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/50 text-[#25D366] hover:text-emerald-300 font-semibold text-xs transition-all shadow-sm"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg bg-[#25d366] hover:bg-[#20bd5a] text-white font-bold text-xs transition-all shadow-sm"
               id="navbar-whatsapp-btn"
             >
-              <MessageCircle className="w-4 h-4 fill-[#25D366] stroke-none" />
+              <MessageCircle className="w-4 h-4 fill-white stroke-none" />
               <span className="hidden xl:inline">(11) 99233-8606</span>
               <span className="xl:hidden">WhatsApp</span>
             </a>
 
             <a
               href="#cursos-elegiveis"
-              className="relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 text-slate-950 font-bold text-sm shadow-lg shadow-amber-500/25 hover:shadow-amber-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all"
+              className="relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438] font-bold text-sm shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all"
               id="navbar-cta-button"
             >
               <span>Ver Cursos & Inscrição</span>
@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-slate-300 hover:text-amber-400 focus:outline-none"
+            className="lg:hidden p-2 text-white hover:text-[#c5a059] focus:outline-none"
             aria-label="Abrir menu"
             id="mobile-menu-toggle-btn"
           >
@@ -113,61 +113,61 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#071320]/98 border-b border-amber-500/30 px-6 py-5 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top">
+          <div className="lg:hidden bg-[#001f57] border-b border-[#173574] px-6 py-5 flex flex-col gap-4 shadow-2xl animate-in slide-in-from-top text-white">
             <a 
               href="#cursos-elegiveis" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-amber-400 font-medium py-1 flex items-center gap-2"
+              className="text-white hover:text-[#c5a059] font-medium py-1 flex items-center gap-2"
             >
-              <GraduationCap className="w-4 h-4 text-amber-400" />
+              <GraduationCap className="w-4 h-4 text-[#c5a059]" />
               🎓 Cursos com Certificação Internacional
             </a>
             <a 
               href="#certificado" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-amber-400 font-medium py-1 flex items-center gap-2"
+              className="text-white hover:text-[#c5a059] font-medium py-1 flex items-center gap-2"
             >
-              <Award className="w-4 h-4 text-amber-400" />
+              <Award className="w-4 h-4 text-[#c5a059]" />
               Certificado Internacional
             </a>
             <a 
               href="#luciana" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-amber-400 font-medium py-1"
+              className="text-white hover:text-[#c5a059] font-medium py-1"
             >
               Diretoria & Docentes
             </a>
             <a 
               href="#depoimentos" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-amber-400 font-medium py-1"
+              className="text-white hover:text-[#c5a059] font-medium py-1"
             >
               Depoimentos de Alunos
             </a>
             <a 
               href="#faq" 
               onClick={() => setMobileMenuOpen(false)}
-              className="text-slate-200 hover:text-amber-400 font-medium py-1"
+              className="text-white hover:text-[#c5a059] font-medium py-1"
             >
               Perguntas Frequentes
             </a>
 
-            <div className="pt-2 border-t border-slate-800 flex flex-col gap-2.5">
+            <div className="pt-2 border-t border-[#173574] flex flex-col gap-2.5">
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#25D366] text-slate-950 font-bold text-sm shadow-md"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#25d366] text-white font-bold text-sm shadow-md"
               >
-                <MessageCircle className="w-4 h-4 fill-slate-950 stroke-none" />
+                <MessageCircle className="w-4 h-4 fill-white stroke-none" />
                 <span>WhatsApp: (11) 99233-8606</span>
               </a>
 
               <a
                 href="#cursos-elegiveis"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-base shadow-lg shadow-amber-500/30"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-[#c5a059] text-[#001438] font-bold text-base shadow-md"
               >
                 <span>Ver Cursos Disponíveis</span>
                 <ArrowRight className="w-4 h-4" />
