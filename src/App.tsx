@@ -15,7 +15,7 @@ import { WhatsAppButton } from './components/WhatsAppButton';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#071320] text-slate-100 font-['Montserrat',sans-serif] selection:bg-amber-500 selection:text-slate-950 relative">
+    <div className="min-h-screen bg-[#f8f9fa] text-[#191c1d] font-['Montserrat',sans-serif] selection:bg-[#c5a059] selection:text-[#001438] relative">
       {/* Top Navbar */}
       <Navbar />
 

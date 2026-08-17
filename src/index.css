@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+:root {
+  --color-primary: #001f57;
+  --color-primary-container: #173574;
+  --color-primary-fixed: #dae2ff;
+  --color-primary-fixed-dim: #b2c5ff;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #001847;
+  
+  --color-accent: #c5a059;
+  --color-secondary: #8c6d2d;
+  --color-secondary-fixed: #ecdcb9;
+  --color-secondary-fixed-dim: #d4b572;
+  --color-on-secondary: #ffffff;
+  
+  --color-background: #f8f9fa;
+  --color-surface: #f8f9fa;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-variant: #e1e3e4;
+  --color-surface-tint: #425c9d;
+  
+  --color-on-background: #191c1d;
+  --color-on-surface: #191c1d;
+  --color-on-surface-variant: #444650;
+  
+  --color-outline: #747781;
+  --color-outline-variant: #c4c6d2;
+  --color-whatsapp: #25d366;
+}
+
 @layer utilities {
   .font-cinzel {
     font-family: 'Cinzel', serif;
@@ -10,19 +42,32 @@
   .font-heading {
     font-family: 'Plus Jakarta Sans', 'Montserrat', sans-serif;
   }
+  
+  /* Brand Gradients matching official Instituto Saber Consciente */
   .gold-gradient-text {
-    background: linear-gradient(135deg, #FFF0B5 0%, #E6CA65 25%, #C2962D 50%, #F5E28E 75%, #A8791B 100%);
+    background: linear-gradient(135deg, #F5E8C7 0%, #C5A059 50%, #9B782E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .gold-border-gradient {
-    border-image: linear-gradient(to bottom right, #f6e05e, #d69e2e, #b7791f) 1;
+  
+  .navy-gradient-bg {
+    background: linear-gradient(180deg, #001f57 0%, #173574 50%, #001847 100%);
   }
+
   .gold-glow {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+    box-shadow: 0 0 25px rgba(197, 160, 89, 0.25);
   }
-  .blue-glow {
-    box-shadow: 0 0 30px rgba(30, 90, 170, 0.35);
+  
+  .navy-glow {
+    box-shadow: 0 10px 30px rgba(0, 31, 87, 0.25);
+  }
+
+  .shadow-card {
+    box-shadow: 0 4px 20px rgba(23, 53, 116, 0.08);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: 0 12px 32px rgba(23, 53, 116, 0.16);
   }
 }
 
@@ -45,7 +90,7 @@
     transform: scale(1);
   }
   50% {
-    opacity: 0.92;
+    opacity: 0.94;
     transform: scale(1.02);
   }
 }
@@ -53,3 +98,4 @@
 .animate-pulse-subtle {
   animation: pulse-subtle 2.5s ease-in-out infinite;
 }
+
