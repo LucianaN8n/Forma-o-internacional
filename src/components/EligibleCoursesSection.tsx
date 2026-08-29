@@ -107,15 +107,6 @@ export const EligibleCoursesSection: React.FC = () => {
                           <Check className="w-4 h-4 text-[#00875a] flex-shrink-0 mt-0.5" />
                           <span>Acesso Vitalício + Videoaulas Práticas + PDF</span>
                         </div>
-
-                        {/* Special Terapeuta Master Bonus: Mentor Terapêutico */}
-                        {isMaster && (
-                          <div className="flex items-start gap-2 p-1.5 rounded-lg bg-[#c5a059]/15 border border-[#c5a059]/40 text-[#001f57] font-semibold">
-                            <Bot className="w-4 h-4 text-[#8c6d2d] flex-shrink-0 mt-0.5" />
-                            <span>BÔNUS: Mentor Terapêutico (Estruture atendimentos do zero)</span>
-                          </div>
-                        )}
-
                         <div className="flex items-start gap-2">
                           <Gift className="w-4 h-4 text-[#c5a059] flex-shrink-0 mt-0.5" />
                           <span>Bônus: Carteira Digital ATH (1 ano grátis)</span>

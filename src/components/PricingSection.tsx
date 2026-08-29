@@ -75,12 +75,6 @@ export const PricingSection: React.FC = () => {
                       <Check className="w-3.5 h-3.5 text-[#25d366] flex-shrink-0" />
                       <span>Acesso Vitalício + Videoaulas</span>
                     </div>
-                    {course.id === 'terapeuta-master' && (
-                      <div className="flex items-center gap-2 text-[#ecdcb9] font-semibold">
-                        <Gift className="w-3.5 h-3.5 text-[#c5a059] flex-shrink-0" />
-                        <span>BÔNUS: Mentor Terapêutico (Casos & PDF)</span>
-                      </div>
-                    )}
                     <div className="flex items-center gap-2">
                       <Gift className="w-3.5 h-3.5 text-[#c5a059] flex-shrink-0" />
                       <span>Carteira Digital ATH (1 ano grátis)</span>
