@@ -182,6 +182,7 @@ export const ELIGIBLE_COURSES: EligibleCourse[] = [
     ],
     includedBonuses: [
       "Certificado Internacional de 568h emitido nos EUA (Saber Consciente LLC)",
+      "Bônus Exclusivo: Mentor Terapêutico (Estruturação de atendimentos do zero, Anamnese, Sugestão de Técnicas, Plano de Ação de 30 dias, Relatório em PDF e Pergunta ao Mentor)",
       "Bônus Especial: Carteira Digital emitida pela ATH Associação (Gratuita por 1 ano)",
       "Bônus: Técnicas de Atendimento",
       "Bônus: Primeiros passos para começar na área",

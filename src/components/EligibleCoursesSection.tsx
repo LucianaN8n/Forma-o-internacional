@@ -1,23 +1,18 @@
 import React, { useState } from 'react';
 import { ELIGIBLE_COURSES } from '../data/coursesData';
-import { EligibleCourse } from '../types';
 import { 
   GraduationCap, 
-  Award, 
-  Clock, 
   Star, 
   Check, 
-  ArrowRight, 
   Sparkles, 
   ShieldCheck, 
   BookOpen, 
-  Users, 
-  Target, 
-  FileText, 
-  CheckCircle2, 
-  ChevronRight,
   ExternalLink,
-  Gift
+  Gift,
+  Bot,
+  CheckCircle2,
+  HelpCircle,
+  FileText
 } from 'lucide-react';
 
 export const EligibleCoursesSection: React.FC = () => {
@@ -26,185 +21,140 @@ export const EligibleCoursesSection: React.FC = () => {
   const selectedCourse = ELIGIBLE_COURSES.find(c => c.id === selectedCourseId) || ELIGIBLE_COURSES[1];
 
   return (
-    <section id="cursos-elegiveis" className="py-20 lg:py-28 bg-[#f8f9fa] relative overflow-hidden text-[#191c1d]">
-      {/* Ambient background glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[900px] h-[600px] bg-[#c5a059]/10 rounded-full blur-[150px] pointer-events-none" />
-
+    <section id="cursos-elegiveis" className="py-16 lg:py-24 bg-[#f8f9fa] relative overflow-hidden text-[#191c1d]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 lg:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#001f57]/10 border border-[#001f57]/20 text-[#001f57] text-xs sm:text-sm font-bold mb-4 tracking-wide uppercase">
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#001f57]/10 border border-[#001f57]/20 text-[#001f57] text-xs font-bold mb-3 tracking-wide uppercase">
             <GraduationCap className="w-4 h-4 text-[#001f57]" />
-            🎓 Cursos 100% Online com Certificação Internacional
+            Cursos Disponíveis
           </div>
 
-          <h2 className="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#001f57] tracking-tight leading-tight">
-            Formações com <span className="gold-gradient-text">Certificação Internacional</span>
+          <h2 className="font-cinzel text-3xl sm:text-4xl font-extrabold text-[#001f57] tracking-tight">
+            Escolha Sua Formação & <span className="gold-gradient-text">Matricule-se</span>
           </h2>
           
-          <p className="mt-4 text-[#444650] text-base sm:text-lg leading-relaxed">
-            Todas as formações são <strong>100% online com acesso vitalício</strong>. Consulte as informações completas, grade curricular e inscreva-se com certificação emitida nos Estados Unidos.
+          <p className="mt-3 text-[#444650] text-sm sm:text-base leading-relaxed">
+            Formações 100% online com acesso vitalício, suporte a dúvidas e certificação emitida nos Estados Unidos.
           </p>
         </div>
 
-        {/* 3 Main Course Cards Grid with Complete Information and Links */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-16">
+        {/* 3 Main Clean Course Cards Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-12">
           {ELIGIBLE_COURSES.map((course) => {
             const isFeatured = course.featured;
-            
-            const theme = {
-              violet: {
-                borderHighlight: 'border-[#5b3294]',
-                badgeBg: 'bg-[#5b3294]/15 text-[#5b3294] border-[#5b3294]/30',
-                btnBg: 'bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438]',
-                glow: 'shadow-xl shadow-[#5b3294]/10',
-              },
-              emerald: {
-                borderHighlight: 'border-[#c5a059]',
-                badgeBg: 'bg-[#00875a]/15 text-[#00875a] border-[#00875a]/30',
-                btnBg: 'bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438]',
-                glow: 'shadow-2xl shadow-[#c5a059]/20',
-              },
-              amber: {
-                borderHighlight: 'border-[#c5a059]',
-                badgeBg: 'bg-[#c5a059]/20 text-[#8c6d2d] border-[#c5a059]/40',
-                btnBg: 'bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438]',
-                glow: 'shadow-xl shadow-[#c5a059]/15',
-              }
-            }[course.highlightColor];
+            const isMaster = course.id === 'terapeuta-master';
 
             return (
               <div
                 key={course.id}
                 id={`card-${course.id}`}
-                className={`relative rounded-3xl flex flex-col justify-between transition-all duration-300 ${
+                className={`relative rounded-2xl flex flex-col justify-between transition-all duration-300 ${
                   isFeatured 
-                    ? `p-1 bg-gradient-to-b from-[#c5a059] via-[#001f57] to-[#c5a059] ${theme.glow} lg:-translate-y-2` 
-                    : `p-0.5 bg-[#e1e3e4] shadow-md hover:shadow-lg`
+                    ? 'bg-white border-2 border-[#c5a059] shadow-xl lg:-translate-y-1' 
+                    : 'bg-white border border-[#e1e3e4] shadow-sm hover:shadow-md'
                 }`}
               >
-                {/* Ribbon Tag */}
+                {/* Ribbon Tag for Featured */}
                 {isFeatured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#c5a059] text-[#001438] text-xs font-black uppercase tracking-widest px-4 py-1 rounded-full shadow-lg flex items-center gap-1.5 z-20">
-                    <Sparkles className="w-3.5 h-3.5 text-[#001438]" />
-                    FORMAÇÃO MAIS PROCURADA
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#c5a059] text-[#001438] text-[11px] font-black uppercase tracking-wider px-3.5 py-0.5 rounded-full shadow-md flex items-center gap-1 z-20">
+                    <Sparkles className="w-3 h-3" />
+                    MAIS PROCURADO
                   </div>
                 )}
 
-                <div className="bg-white rounded-[22px] p-6 sm:p-7 flex flex-col justify-between h-full border border-[#f0f1f2]">
+                <div className="p-6 sm:p-7 flex flex-col justify-between h-full">
                   
                   <div>
                     {/* Top Stats */}
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className={`text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border ${theme.badgeBg}`}>
-                        {course.badge}
+                      <span className="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-md bg-[#001f57]/10 text-[#001f57]">
+                        {course.hours} • 100% Online
                       </span>
                       
-                      <div className="flex items-center gap-1 text-xs text-[#c5a059] font-bold">
+                      <div className="flex items-center gap-1 text-xs text-[#8c6d2d] font-bold">
                         <Star className="w-3.5 h-3.5 fill-[#c5a059] text-[#c5a059]" />
                         <span>{course.rating}</span>
-                        <span className="text-[#74777f] font-normal">({course.studentsCount})</span>
                       </div>
                     </div>
 
                     {/* Emoji and Course Title */}
-                    <div className="mb-4">
-                      <div className="text-4xl mb-2">{course.emoji}</div>
-                      <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#001f57] leading-snug">
+                    <div className="mb-3">
+                      <div className="text-3xl mb-1.5">{course.emoji}</div>
+                      <h3 className="font-cinzel text-xl font-bold text-[#001f57] leading-snug">
                         {course.title}
                       </h3>
-                      <div className="inline-flex items-center gap-1.5 mt-1.5 text-xs font-bold text-[#001f57] bg-[#001f57]/10 px-2.5 py-1 rounded-md border border-[#001f57]/15">
-                        <Award className="w-3.5 h-3.5 text-[#c5a059]" />
-                        <span>+ Certificação Internacional (EUA)</span>
-                      </div>
+                      <p className="text-xs font-semibold text-[#8c6d2d] mt-0.5">
+                        {course.subtitle}
+                      </p>
                     </div>
 
                     {/* Short Description */}
-                    <p className="text-xs sm:text-sm text-[#444650] leading-relaxed mb-5">
+                    <p className="text-xs text-[#555861] leading-relaxed mb-4">
                       {course.shortDescription}
                     </p>
 
-                    {/* Credential Box */}
-                    <div className="rounded-xl p-3.5 mb-5 bg-[#f0f4f8] border border-[#d2ddec]">
-                      <div className="flex items-center gap-1.5 text-xs font-bold text-[#001f57] mb-1">
-                        <Award className="w-4 h-4 text-[#c5a059] flex-shrink-0" />
-                        <span>Diploma Internacional:</span>
-                      </div>
-                      <p className="text-[11px] text-[#001f57] italic font-cinzel leading-tight font-semibold">
-                        {course.certificateTitle}
-                      </p>
-                      <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t border-[#d2ddec] text-[10px] text-[#444650]">
-                        <span className="flex items-center gap-1 text-[#001f57] font-semibold">
-                          <Clock className="w-3 h-3 text-[#c5a059]" /> {course.hours} • 100% Online
-                        </span>
-                        <span>Saber Consciente LLC (EUA)</span>
-                      </div>
-                    </div>
+                    {/* Key Highlights */}
+                    <div className="space-y-2 mb-4 pt-3 border-t border-[#f0f1f2]">
+                      <div className="text-xs font-bold text-[#001f57]">O que está incluso:</div>
+                      <div className="space-y-1.5 text-xs text-[#444650]">
+                        <div className="flex items-start gap-2">
+                          <Check className="w-4 h-4 text-[#00875a] flex-shrink-0 mt-0.5" />
+                          <span>Certificação Internacional emitida nos EUA</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <Check className="w-4 h-4 text-[#00875a] flex-shrink-0 mt-0.5" />
+                          <span>Acesso Vitalício + Videoaulas Práticas + PDF</span>
+                        </div>
 
-                    {/* Learning Outcomes Checklist */}
-                    <div className="space-y-2 mb-4">
-                      <h4 className="text-xs font-bold text-[#001f57] uppercase tracking-wider flex items-center gap-1.5">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#c5a059]" />
-                        O que você vai dominar:
-                      </h4>
-
-                      <div className="space-y-1.5">
-                        {course.learningOutcomes.slice(0, 3).map((outcome, idx) => (
-                          <div key={idx} className="flex items-start gap-2 text-xs text-[#444650]">
-                            <Check className="w-3.5 h-3.5 text-[#00875a] flex-shrink-0 mt-0.5" />
-                            <span className="line-clamp-2">{outcome}</span>
+                        {/* Special Terapeuta Master Bonus: Mentor Terapêutico */}
+                        {isMaster && (
+                          <div className="flex items-start gap-2 p-1.5 rounded-lg bg-[#c5a059]/15 border border-[#c5a059]/40 text-[#001f57] font-semibold">
+                            <Bot className="w-4 h-4 text-[#8c6d2d] flex-shrink-0 mt-0.5" />
+                            <span>BÔNUS: Mentor Terapêutico (Estruture atendimentos do zero)</span>
                           </div>
-                        ))}
-                      </div>
-                    </div>
+                        )}
 
-                    {/* Carteira Digital ATH Bonus Tag */}
-                    <div className="mb-4 p-2.5 rounded-xl bg-[#c5a059]/15 border border-[#c5a059]/40 flex items-start gap-2 text-xs">
-                      <Gift className="w-4 h-4 text-[#8c6d2d] flex-shrink-0 mt-0.5" />
-                      <div>
-                        <strong className="text-[#8c6d2d] font-bold block">
-                          BÔNUS: Carteira Digital ATH
-                        </strong>
-                        <span className="text-[11px] text-[#444650]">
-                          Emitida pela ATH Associação, gratuita por 1 ano.
-                        </span>
+                        <div className="flex items-start gap-2">
+                          <Gift className="w-4 h-4 text-[#c5a059] flex-shrink-0 mt-0.5" />
+                          <span>Bônus: Carteira Digital ATH (1 ano grátis)</span>
+                        </div>
                       </div>
                     </div>
 
                   </div>
 
-                  {/* Bottom Action Area with Direct Hotmart Link */}
-                  <div className="pt-4 border-t border-[#e1e3e4] space-y-3">
+                  {/* Bottom Action Area */}
+                  <div className="pt-4 border-t border-[#f0f1f2] space-y-2.5">
                     
-                    {/* Official Hotmart Link Button */}
+                    {/* Hotmart Direct Link Button */}
                     <a
                       href={course.checkoutUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl font-bold text-sm sm:text-base shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all text-center ${theme.btnBg}`}
+                      className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl font-bold text-sm bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438] shadow-md hover:scale-[1.01] active:scale-[0.99] transition-all text-center"
                       id={`btn-checkout-${course.id}`}
                     >
-                      <span>👉 Matricular com Certificado</span>
+                      <span>Garantir Vaga & Certificado</span>
                       <ExternalLink className="w-4 h-4" />
                     </a>
 
-                    {/* Button to view detailed syllabus */}
+                    {/* Toggle Syllabus */}
                     <button
                       onClick={() => {
                         setSelectedCourseId(course.id);
-                        document.getElementById('grade-detalhada')?.scrollIntoView({ behavior: 'smooth' });
+                        document.getElementById('grade-curricular')?.scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className="w-full py-2 px-3 rounded-lg text-xs font-semibold text-[#001f57] hover:text-[#001f57] bg-[#f0f4f8] hover:bg-[#e2eaf4] border border-[#d2ddec] transition-colors flex items-center justify-center gap-1.5 cursor-pointer"
+                      className="w-full py-2 px-3 rounded-lg text-xs font-medium text-[#001f57] hover:bg-[#f0f4f8] transition-colors flex items-center justify-center gap-1 cursor-pointer"
                     >
-                      <BookOpen className="w-3.5 h-3.5 text-[#001f57]" />
-                      <span>Ver Grade Curricular Completa</span>
-                      <ChevronRight className="w-3.5 h-3.5 text-[#001f57]" />
+                      <BookOpen className="w-3.5 h-3.5" />
+                      <span>Ver Grade Curricular & Detalhes</span>
                     </button>
 
-                    <div className="flex items-center justify-center gap-2 text-[11px] text-[#74777f] text-center pt-1">
+                    <div className="flex items-center justify-center gap-1.5 text-[11px] text-[#74777f] text-center">
                       <ShieldCheck className="w-3.5 h-3.5 text-[#00875a]" />
-                      <span>Acesso Imediato & Vitalício via Hotmart</span>
+                      <span>Pagamento Seguro via Hotmart • 7 Dias de Garantia</span>
                     </div>
 
                   </div>
@@ -215,172 +165,127 @@ export const EligibleCoursesSection: React.FC = () => {
           })}
         </div>
 
-        {/* Detailed Curriculum Viewer for the Selected Course */}
-        <div id="grade-detalhada" className="bg-white border-2 border-[#c5a059]/40 rounded-3xl p-6 sm:p-10 shadow-xl relative overflow-hidden text-[#191c1d]">
-          
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#e1e3e4]">
+        {/* Detailed Curriculum Section */}
+        <div id="grade-curricular" className="bg-white border border-[#e1e3e4] rounded-2xl p-6 sm:p-8 shadow-sm">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#e1e3e4]">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#001f57]/10 border border-[#001f57]/20 text-[#001f57] text-xs font-bold uppercase tracking-wider mb-2">
-                <BookOpen className="w-3.5 h-3.5 text-[#001f57]" />
-                Grade Curricular & Detalhes do Programa
+              <div className="text-xs font-bold uppercase tracking-wider text-[#8c6d2d]">
+                Detalhes dos Módulos
               </div>
-              <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#001f57] flex items-center gap-2">
-                <span>{selectedCourse.emoji}</span>
-                <span>{selectedCourse.title}</span>
+              <h3 className="font-cinzel text-xl sm:text-2xl font-bold text-[#001f57] mt-0.5">
+                Grade Curricular: {selectedCourse.emoji} {selectedCourse.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#444650] mt-1">
-                {selectedCourse.fullDescription}
-              </p>
             </div>
 
             {/* Switch Course Selector Tabs */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5">
               {ELIGIBLE_COURSES.map((c) => (
                 <button
                   key={c.id}
                   onClick={() => setSelectedCourseId(c.id)}
-                  className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
+                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
                     selectedCourseId === c.id
-                      ? 'bg-[#001f57] text-white shadow-md'
-                      : 'bg-[#f0f4f8] text-[#001f57] hover:bg-[#e2eaf4] border border-[#d2ddec]'
+                      ? 'bg-[#001f57] text-white shadow-sm'
+                      : 'bg-[#f0f4f8] text-[#001f57] hover:bg-[#e2eaf4]'
                   }`}
                 >
-                  <span>{c.emoji}</span>
-                  <span>{c.title}</span>
+                  <span>{c.emoji} {c.title}</span>
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Module List Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
-            {selectedCourse.modulesList.map((m, idx) => (
-              <div
-                key={idx}
-                className="p-4 rounded-xl bg-[#f8f9fa] border border-[#e1e3e4] hover:border-[#001f57]/40 transition-colors"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-lg bg-[#001f57] text-white flex items-center justify-center font-bold text-xs flex-shrink-0">
-                    {idx + 1}
-                  </div>
-                  <div>
-                    <h4 className="font-cinzel text-sm font-bold text-[#001f57]">
-                      {m.title}
-                    </h4>
-                    <p className="text-xs text-[#444650] mt-1 leading-relaxed">
-                      {m.description}
-                    </p>
-                  </div>
-                </div>
+          <p className="text-xs text-[#555861] mt-3">
+            {selectedCourse.fullDescription}
+          </p>
+
+          {/* Modules List Grid */}
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+            {selectedCourse.modulesList.map((module, idx) => (
+              <div key={idx} className="p-3 rounded-xl bg-[#f8f9fa] border border-[#e8eaed]">
+                <div className="text-xs font-bold text-[#001f57]">{module.title}</div>
+                <div className="text-[11px] text-[#555861] mt-1 line-clamp-3">{module.description}</div>
               </div>
             ))}
           </div>
 
-          {/* Special Categorized Techniques & Modules Section */}
-          {selectedCourse.techniqueCategories && selectedCourse.techniqueCategories.length > 0 && (
-            <div className="my-10 p-6 sm:p-8 rounded-2xl bg-[#f0f4f8] border-2 border-[#d2ddec]">
-              <div className="text-center max-w-2xl mx-auto mb-8">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#001f57]/10 border border-[#001f57]/20 text-[#001f57] text-xs font-bold uppercase tracking-wider mb-2">
-                  <Sparkles className="w-3.5 h-3.5 text-[#c5a059]" />
-                  Grade & Conteúdos Especiais da Formação
-                </span>
-                <h4 className="font-cinzel text-xl sm:text-2xl font-bold text-[#001f57]">
-                  Conteúdo Completo: <span className="gold-gradient-text">{selectedCourse.title}</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-[#444650] mt-1">
-                  Você terá acesso a todo o conteúdo programático abaixo, estruturado para atuação profissional com excelência:
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {selectedCourse.techniqueCategories.map((cat, cIdx) => {
-                  return (
-                    <div
-                      key={cIdx}
-                      className="rounded-xl bg-white border border-[#e1e3e4] p-5 flex flex-col justify-between shadow-md"
-                    >
-                      <div>
-                        <div className="flex items-center justify-between gap-2 mb-3">
-                          <span className="text-2xl">✨</span>
-                          <span className="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-[#001f57]/10 text-[#001f57] border border-[#001f57]/20">
-                            {cat.techniques.length} Técnicas
-                          </span>
-                        </div>
-
-                        <h5 className="font-cinzel text-base font-bold text-[#001f57] mb-1.5">
-                          {cat.categoryName}
-                        </h5>
-
-                        {cat.description && (
-                          <p className="text-[11px] text-[#74777f] mb-4 leading-relaxed">
-                            {cat.description}
-                          </p>
-                        )}
-
-                        <div className="space-y-1.5 pt-2 border-t border-[#e1e3e4]">
-                          {cat.techniques.map((tech, tIdx) => (
-                            <div
-                              key={tIdx}
-                              className="flex items-center gap-2 text-xs text-[#191c1d] py-1 px-2 rounded-lg bg-[#f8f9fa] hover:bg-[#eef2f6] transition-colors"
-                            >
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#00875a] flex-shrink-0" />
-                              <span className="font-medium">{tech}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Included Bonuses Strip */}
-          {selectedCourse.includedBonuses && selectedCourse.includedBonuses.length > 0 && (
-            <div className="my-6 p-5 rounded-2xl bg-[#c5a059]/15 border border-[#c5a059]/40">
-              <div className="flex items-center gap-2 mb-3">
-                <Gift className="w-5 h-5 text-[#8c6d2d]" />
-                <h5 className="font-cinzel text-sm sm:text-base font-bold text-[#001f57] uppercase tracking-wider">
-                  Bônus Inclusos na Formação ({selectedCourse.title})
-                </h5>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {selectedCourse.includedBonuses.map((bonus, bIdx) => (
-                  <div key={bIdx} className="flex items-center gap-2 text-xs text-[#191c1d] bg-white px-3 py-2 rounded-lg border border-[#e1e3e4]">
-                    <CheckCircle2 className="w-4 h-4 text-[#00875a] flex-shrink-0" />
-                    <span className="font-medium">{bonus}</span>
+          {/* Special Bonus Showcase for Terapeuta Master: Mentor Terapêutico */}
+          {selectedCourse.id === 'terapeuta-master' && (
+            <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#001f57] via-[#0d2a63] to-[#001438] text-white border-2 border-[#c5a059] shadow-xl">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-[#425c9d]/40">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xl bg-[#c5a059] text-[#001438] flex items-center justify-center flex-shrink-0 shadow-md">
+                    <Bot className="w-5 h-5 text-[#001438]" />
                   </div>
-                ))}
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#ecdcb9] bg-[#173574] px-2.5 py-0.5 rounded-full border border-[#c5a059]/40">
+                      🎁 BÔNUS EXCLUSIVO INCLUSO
+                    </span>
+                    <h4 className="font-cinzel text-lg sm:text-xl font-bold text-white mt-0.5">
+                      Conheça o Mentor Terapêutico
+                    </h4>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-xs sm:text-sm text-[#dae2ff] mt-3 leading-relaxed">
+                Uma ferramenta para apoiar terapeutas a <strong>estruturar atendimentos do zero</strong>.
+                Você registra as informações do atendimento e o Mentor ajuda a organizar o caso. Em poucos passos você tem:
+              </p>
+
+              {/* 5 Steps Grid */}
+              <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#173574]/80 border border-[#425c9d]/40 text-xs text-white">
+                  <CheckCircle2 className="w-4 h-4 text-[#c5a059] flex-shrink-0" />
+                  <span>Anamnese estruturada</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#173574]/80 border border-[#425c9d]/40 text-xs text-white">
+                  <CheckCircle2 className="w-4 h-4 text-[#c5a059] flex-shrink-0" />
+                  <span>Pontos importantes para investigação</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#173574]/80 border border-[#425c9d]/40 text-xs text-white">
+                  <CheckCircle2 className="w-4 h-4 text-[#c5a059] flex-shrink-0" />
+                  <span>Sugestões de técnicas do curso para tratamento</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#173574]/80 border border-[#425c9d]/40 text-xs text-white">
+                  <CheckCircle2 className="w-4 h-4 text-[#c5a059] flex-shrink-0" />
+                  <span>Plano de ação de 30 dias</span>
+                </div>
+                <div className="flex items-center gap-2 p-2.5 rounded-xl bg-[#173574]/80 border border-[#425c9d]/40 text-xs text-white sm:col-span-2 lg:col-span-1">
+                  <FileText className="w-4 h-4 text-[#c5a059] flex-shrink-0" />
+                  <span>Relatório final em PDF</span>
+                </div>
+              </div>
+
+              {/* Pergunte ao Mentor Box */}
+              <div className="mt-4 p-3.5 rounded-xl bg-[#c5a059]/15 border border-[#c5a059]/40 flex items-start gap-2.5 text-xs text-[#dae2ff]">
+                <HelpCircle className="w-4 h-4 text-[#c5a059] flex-shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-[#ecdcb9] uppercase tracking-wider block font-bold mb-0.5">
+                    PERGUNTE AO MENTOR
+                  </strong>
+                  <span>
+                    Ainda ficou alguma dúvida? Utilize o campo de consulta para receber apoio na organização e compreensão do caso.
+                  </span>
+                </div>
               </div>
             </div>
           )}
 
-          {/* Target Audience and Included Items Strip */}
-          <div className="p-5 rounded-2xl bg-[#001f57] text-white border border-[#173574] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-1 max-w-xl">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-[#c5a059] flex items-center gap-1.5">
-                <Target className="w-3.5 h-3.5" />
-                Público-Alvo Indicado:
-              </span>
-              <p className="text-xs text-[#dae2ff] leading-relaxed">
-                {selectedCourse.targetAudience}
-              </p>
-            </div>
-
-            <div className="flex-shrink-0 w-full md:w-auto">
-              <a
-                href={selectedCourse.checkoutUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438] font-bold text-sm shadow-xl hover:scale-105 transition-all text-center"
-              >
-                <span>Inscrever-se em {selectedCourse.title}</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+          <div className="mt-6 pt-4 border-t border-[#e1e3e4] flex flex-col sm:flex-row items-center justify-between gap-3">
+            <span className="text-xs text-[#555861]">
+              Pronto para iniciar sua formação com certificação internacional?
+            </span>
+            <a
+              href={selectedCourse.checkoutUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#c5a059] hover:bg-[#b38c3c] text-[#001438] font-bold text-xs shadow-sm transition-all"
+            >
+              <span>Matricular em {selectedCourse.title}</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
           </div>
-
         </div>
 
       </div>
