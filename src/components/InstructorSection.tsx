@@ -18,10 +18,10 @@ export const InstructorSection: React.FC = () => {
     },
     {
       name: "Prof. Rogério Temporim",
-      role: "Ministrante de Psicoterapia & Psicanálise",
+      role: "Psicoterapia, Psicanálise & Cristaloterapia",
       credential: "Graduado USP • Mestre em Psicologia (EUA)",
       image: "https://saberconscienteinstituto.com/wp-content/uploads/2023/05/rogerio-temporim-1.jpg",
-      bio: "Psicanalista clínico, neuropsicanalista e escritor. Conduz formações clínicas estruturadas e supervisões com mais de 77 mil alunos capacitados.",
+      bio: "Psicanalista clínico, neuropsicanalista, escritor e ministrante de cristaloterapia. Conduz formações clínicas estruturadas e supervisões com mais de 77 mil alunos capacitados.",
       highlight: "+77.000 Alunos"
     },
     {
@@ -34,19 +34,11 @@ export const InstructorSection: React.FC = () => {
     },
     {
       name: "Prof. Francisco Miguel Kessler",
-      role: "Ministrante de Neurociência & Hipnose",
+      role: "Terapia Quântica, Neurociência & Hipnose",
       credential: "Certificação Internacional • Mestre Reiki",
       image: "https://saberconscienteinstituto.com/wp-content/uploads/2023/05/francisco.png",
-      bio: "Hipnoterapeuta internacional e especialista em neurociência aplicada, reprogramação neural e desenvolvimento comportamental.",
-      highlight: "Hipnose Clínica"
-    },
-    {
-      name: "Prof. Tibério",
-      role: "Ministrante de Bioenergia & Quântica",
-      credential: "Cristais, PNL & Mindfulness",
-      image: "https://saberconscienteinstituto.com/wp-content/uploads/2023/05/tiberio.png",
-      bio: "Especialista em cristaloterapia, Programação Neurolinguística (PNL) e atenção plena para alinhamento físico e emocional.",
-      highlight: "PNL & Bioenergia"
+      bio: "Especialista em terapia quântica, hipnoterapeuta internacional e especialista em neurociência aplicada, reprogramação neural e desenvolvimento comportamental.",
+      highlight: "Quântica & Hipnose"
     },
     {
       name: "Profª. Mariana Sallum",
